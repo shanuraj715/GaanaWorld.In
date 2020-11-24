@@ -1,0 +1,38 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteBase /
+RewriteRule ^contact-us pages/contact-us.php [NC,L]
+RewriteRule ^about-us pages/about-us.php [NC,L]
+RewriteRule ^privacy-policy pages/privacy-policy.php [NC,L]
+RewriteRule ^copyright-policy pages/copyright-policy.php [NC,L]
+RewriteRule ^create-account pages/create-account.php [NC,L]
+RewriteRule ^search/([0-9a-zA-Z+]) search.php?search=$1 [NC,L]
+RewriteRule ^song song.php [NC,L]
+RewriteRule ^singer-list list_singer.php [NC,L]
+RewriteRule ^singer singer-song.php [NC,L]
+RewriteRule ^category category.php [NC,L]
+RewriteRule ^albums album-list.php [NC,L]
+RewriteRule ^show-album album.php [NC,L]
+
+RewriteRule ^s/([0-9a-zA-Z+]) s/index.php?string=$1 [NC,L]
+
+DirectoryIndex index.php
+Options -Indexes
+RewriteCond %{HTTP_HOST} ^gaanaworld\.in\.techfacts007\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.gaanaworld\.in\.techfacts007\.in$
+RewriteRule ^/?$ "http\:\/\/gaanaworld\.in\/" [R=301,L]
+
+
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css)$">
+<IfModule mod_headers.c>
+    Header add Access-Control-Allow-Origin "https://www.gaanaworld.in"
+</IfModule>
+</FilesMatch>
+
+
+
+
+
+
+ErrorDocument 404 /404.php

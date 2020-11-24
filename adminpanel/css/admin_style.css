@@ -1,0 +1,781 @@
+
+
+
+.login, .reset_password_block{
+	padding: 40px 20%;
+	text-align: center;
+}
+
+.form_block{
+	background-color: var(--theme-hover-color);
+	border: solid 2px var(--theme-pink);
+	border-radius: 10px;
+	max-width: 400px;
+	min-width: 400px;
+	padding: 10px;
+	display: inline-block;
+}
+
+.login_text{
+	font-family: 'Merienda', cursive;
+	font-size: 30px;
+	padding: 0;
+	margin: 5px 0 20px 0;
+}
+
+.login_input_block{
+	margin: 10px 0;
+}
+
+.username_input{
+	width: 300px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	font-size: 18px;
+}
+
+.password_input{
+	width: 300px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	font-size: 18px;
+}
+
+.login_btn_block{
+	margin: 15px 0;
+}
+
+.login_btn{
+	font-size: 20px;
+	padding: 5px 40px;
+	border-radius: 5px;
+	border: solid 2px var(--theme-yellow);
+	color: var(--theme-yellow);
+	background-color: var(--theme-gray);
+}
+
+.login_forgot_pass{
+	text-align: right;
+}
+
+.forgot_pass_btn{
+	margin: 0 15px;
+	color: var(--theme-pink);
+	text-decoration: none;
+}
+
+.forgot_pass_btn:hover{
+	color: var(--theme-gray);
+}
+
+.reset_password_block{
+	text-align: center;
+}
+
+
+
+
+/* navitaion */
+
+.admin_navigation{
+	display: flex;
+	background-color: var(--theme-gray);
+}
+
+.admin_nav_left{
+	flex-grow: 2;
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+.admin_left_link_btn{
+	padding: 10px 15px;
+	color: var(--theme-white);
+	text-decoration: none;
+}
+
+.admin_left_link_btn:hover{
+	color: var(--theme-yellow);
+}
+
+.admin_nav_right{
+	padding: 10px 15px;
+	display: inline-block;
+}
+
+.admin-logout-btn{
+	padding: 5px 10ox;
+	margin-right: 20px;
+	color: var(--theme-white);
+	text-decoration: none;
+}
+
+.admin-logout-btn:hover{
+	color: var(--theme-pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* upload */
+
+.upload-container{
+	text-align: center;
+}
+
+.message_shower{
+	padding: 8px;
+	margin: 0;
+	color: var(--theme-gray);
+	background-color: var(--theme-yellow);
+	font-size: 17px;
+}
+
+.upload_block{
+	max-width: 600px;
+	min-width: 600px;
+	display: inline-block;
+	text-align: left;
+	background-color: var(--theme-hover-color);
+	border: solid 1px var(--theme-pink);
+	padding: 10px;
+	border-radius: 6px;
+	margin: 15px;
+}
+
+.admin_page_titles{
+	padding: 2px 0;
+	margin: 0;
+	font-family: 'Merienda', cursive;
+	font-size: 24px;
+	text-align: center;
+	background-image: linear-gradient(to right, var(--theme-pink), var(--theme-pink2));
+	border-radius: 5px;
+	
+}
+
+.input_block{
+	margin: 12px 0;
+}
+
+.song_title_box{
+	padding: 4px 8px;
+	font-size: 18px;
+	width: 97%;
+	max-width: 97%;
+	border: solid 1px var(--theme-pink);
+	outline: none;
+}
+
+.file_upload_block{
+	margin: 15px 0;
+}
+
+.option_block{
+	margin: 15px 0;
+}
+
+.selector_text{
+	color: var(--theme-pink);
+	font-size: 18px;
+	display: inline-block;
+	min-width: 150px;
+}
+
+.category_selector{
+	font-size: 15px;
+	min-width: 200px;
+	color: var(--theme-gray);
+	padding: 2px 5px;
+}
+
+.category_option{
+
+}
+
+.tags_input{
+	width: 98%;
+	max-width: 98%;
+	min-height: 100px;
+	font-size: 16px;
+	padding: 5px;
+	border: solid 1px var(--theme-pink);
+	outline: none;
+	border-radius: 5px;
+}
+
+.upload_now_btn_block{
+	text-align: right;
+	padding: 0 15px;
+}
+
+.upload_btn{
+	padding: 8px 25px;
+	background-color: var(--theme-gray);
+	color: var(--theme-white);
+	border: solid 2px var(--theme-pink);
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+/* category */
+
+.add-cat-block{
+	text-align: left;
+	padding: 10px 0 20px 0;
+}
+
+.add-cat-btn{
+	padding: 8px 20px;
+	background-color: var(--theme-blue);
+	border: solid 1px var(--theme-pink);
+	color: var(--theme-white);
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+.admin-add-cat{
+	margin: 20px 0 15px 0;
+	display: grid;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.admin-add-cat-inp{
+	font-size: 18px;
+	padding: 4px 8px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	border-radius: 4px;
+	margin: 10px 0;
+}
+
+.admin-add-cat-tags{
+	font-size: 18px;
+	padding: 4px 8px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	border-radius: 4px;
+	margin: 10px 0;
+	min-height: 150px;
+}
+
+.admin-add-cat-btn{
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	padding: 8px 10px;
+	margin: 10px 0;
+	max-width: 200px;
+}
+
+.admin-category{
+	text-align: center;
+}
+
+.admin_category_block{
+	margin: 10px 0;
+	border: solid 1px var(--theme-pink);
+	border-radius: 5px;
+	padding: 15px;
+	background-color: var(--theme-hover-color);
+	display: inline-block;
+	width: 1000px;
+	max-width: 1000px;
+}
+
+.admin-show-category-block{
+	display: inline-block;
+	width: calc(100% - 8px);
+	margin: 15px 0;
+	border: solid 1px var(--theme-blue);
+	padding: 4px;
+}
+
+.admin_cat_head_block{
+	background-color: var(--theme-gray);
+	color: var(--theme-white);
+	padding: 5px 0;
+	display: flex;
+}
+
+.admin-cat-head{
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	padding: 0 10px;
+	display: inline-block;
+}
+
+.ac_id{
+	width: 150px;
+}
+
+.ac_name{
+	flex-grow: 2;
+	border-left: solid 1px var(--theme-yellow);
+}
+
+.ac_total_songs{
+	width: 120px;
+	border-left: solid 1px var(--theme-yellow);
+
+}
+
+.ac_action{
+	width: 170px;
+	border-left: solid 1px var(--theme-yellow);
+}
+
+.admin_cat_child_block{
+	padding: 5px 0;
+	display: flex;
+}
+
+.admin-cat-child{
+	font-size: 16px;
+	text-align: left;
+	padding: 0 10px;
+	display: inline-block;
+	border: none !important;
+}
+
+.ac_childname{
+	width: 150px;
+	text-align: left;
+}
+
+.admin-cat_action{
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.admin-cat-action-btn{
+	color: var(--theme-gray);
+	padding: 4px;
+}
+
+.admin-cat-action-btn:hover{
+	color: var(--theme-blue);
+}
+
+
+
+
+
+.admin_cat_rename_block{
+	margin: 20px 0 15px 0;
+}
+
+.admin_cat_rename_inp{
+	outline: none;
+	border: solid 1px var(--theme-blue);
+	border-radius: 4px;
+	padding: 4px 8px;
+}
+
+.admin_cat_rename_btn{
+	outline: none;
+	border: solid 1px var(--theme-blue);
+	border-radius: 4px;
+	padding: 4px 8px;
+
+}
+
+
+
+
+
+
+
+
+.admin-cat-nest-block{
+	margin: 20px 0 15px 0;
+}
+
+.admin-cat-nest-span{
+	color: var(--theme-pink);
+	padding: 0 15px;
+	font-size: 18px;
+}
+
+.admin-nest-select{
+	padding: 2px 10px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	min-width: 200px;
+	font-family: 'FontAwesome', 'sans-serif';
+}
+
+.admin-nest-opt{
+
+}
+
+.admin_nest_submit{
+	padding: 4px 12px;
+	border: solid 1px var(--theme-pink);
+	border-radius: 4px;
+	outline: none;
+}
+
+
+
+
+.admin-delete-category{
+	margin: 20px 0 15px 0;
+}
+
+.admin-cat-delete-span{
+	color: var(--theme-pink);
+	font-size: 18px;
+	padding: 0 10px;
+}
+
+.admin-delete-cat-btn{
+	padding: 3px 15px;
+	outline: none;
+	border: solid 1px var(--theme-white);
+	background-color: var(--theme-pink);
+	color: var(--theme-white);
+	border-radius: 5px;
+}
+
+.admin-delete-cat-btn2{
+	padding: 3px 15px;
+	outline: none;
+	border: solid 1px var(--theme-white);
+	background-color: var(--theme-blue);
+	color: var(--theme-white);
+	border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+#admin_uploads_block{
+	min-width: 1000px;
+	width: 1200px;
+	max-width: 1250px;
+}
+
+.admin_uploads_child_block{
+	padding: 5px 0;
+	display: flex !important;
+}
+
+.admin_uploads_child_block:hover{
+	background-color: #a5b1c2;
+}
+
+.admin-song_id{
+	width: 60px;
+	text-align: left;
+}
+
+.admin-song_name{
+	flex-grow: 2 !important;
+	text-align: left;
+	display: inline-block;
+}
+
+.admin-song_date{
+	min-width: 70px;
+	max-width: 70px;
+	text-align: left;
+}
+
+.admin-song_category{
+	min-width: 100px;
+	max-width: 100px;
+	text-align: left;
+}
+
+.admin-song_album{
+	min-width: 120px;
+	max-width: 120px;
+	text-align: left;
+}
+
+.admin-song_singer{
+	min-width: 110px;
+	max-width: 110px;
+	text-align: left;
+}
+
+.admin-song_downloads{
+	min-width: 60px;
+	max-width: 60px;
+	text-align: center;
+	padding: 0 4px !important;
+}
+
+.admin-song_action{
+	min-width: 80px;
+	max-width: 80px;
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* admin pagination */
+
+.admin-pagination{
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.admin_pagination_btn{
+	min-height: 22px;
+	max-height: 22px;
+	padding-top: 4px;
+	display: inline-block;
+	width: 25px;
+	background-color: var(--theme-gray);
+	color: var(--theme-white);
+	text-decoration: none;
+	border: solid 1px var(--theme-pink);
+}
+
+.admin_this_page_pagination{
+	background-color: var(--theme-hover-color) !important;
+	color: var(--theme-gray);
+}
+
+.admin-delete-song-btn{
+	padding: 3px 15px;
+	outline: none;
+	border: solid 1px var(--theme-white);
+	background-color: var(--theme-pink);
+	color: var(--theme-white);
+	border-radius: 5px;
+}
+
+.admin-delete-song-btn2{
+	padding: 3px 15px;
+	outline: none;
+	border: solid 1px var(--theme-white);
+	background-color: var(--theme-blue);
+	color: var(--theme-white);
+	border-radius: 5px;
+
+}
+
+
+
+/* admin account */
+
+.admin-account{
+	text-align: center;
+}
+
+.admin-account-sub{
+	display: inline-block;
+	width: 600px;
+	margin: 15px 0;
+	padding: 10px;
+	border: solid 1px var(--theme-pink);
+	border-radius: 5px;
+	background-color: var(--theme-hover-color);
+	text-align: center;
+}
+
+.admin-account-form-block{
+	margin: 10px 0;
+	display: inline-grid;
+	width: 300px;
+
+}
+
+.admin-account-pass1, .admin-account-pass2{
+	font-size: 18px;
+	padding: 4px 8px;
+	border-radius: 5px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	margin: 10px 0;
+}
+
+.admin-account-sub-title{
+	padding: 2px 15px;
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+.admin-account-pass2{
+
+}
+
+.admin-account-submit_btn{
+	width: 150px;
+	padding: 6px 15px;
+	outline: none;
+	border: solid 1px var(--theme-blue);
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+}
+
+.admin-account-more-text-block{
+	margin: 25px 0 10px 0;
+	text-align: left;
+}
+
+.admin-account-more-text{
+	color: var(--theme-gray);
+	display: inline-block;
+	padding: 5px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/* singers */
+
+
+.singer-list-block{
+	display: flex;
+}
+
+.singer-list_cont{
+	padding: 5px;
+	border: solid 1px var(--theme-pink);
+	border-radius: 5px;
+	margin: 15px 0
+}
+
+.singer-list-head{
+	background-color: var(--theme-gray);
+	font-weight: bold;
+	text-align: left;
+	padding: 4px 10px;
+	color: var(--theme-white);
+}
+
+.singer-id{
+	min-width: 100px;
+	max-width: 100px;
+	overflow: hidden;
+}
+
+.singer-name{
+	flex-grow: 2;
+}
+
+.singer-tags{
+	min-width: 300px;
+	max-width: 300px;
+	overflow: hidden;
+	max-height: 35px;
+
+}
+
+.singer-action{
+	min-width: 150px;
+	max-width: 150px;
+	overflow: hidden;
+
+}
+
+.singer-list-row{
+	color: var(--theme-gray);
+	text-align: left;
+	padding: 4px 10px;
+}
+
+.border-bottom{
+	border-bottom: solid 1px var(--theme-gray);
+}
+
+.border-bottom:hover{
+	border-bottom: solid 1px var(--theme-pink);
+}
+
+.action_container{
+	padding: 10px 0;
+}
+
+.singer-add-cont{
+	padding: 0;
+}
+
+.singer-add-block{
+	display: inline-block;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+}
+
+.add-singer-name{
+	margin: 10px 0;
+	padding: 2px 5px;
+	font-size: 18px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	border-radius: 5px;
+}
+
+.add-singer-tag{
+	margin: 10px;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.singer-button{
+	margin: 10px 0;
+	outline: none;
+	border: solid 1px var(--theme-pink);
+	border-radius: 5px;
+	padding: 6px 20px;
+}

@@ -1,0 +1,80 @@
+
+
+.page_container{
+    text-align: center;
+}
+
+.page_window{
+    display: inline-block;
+    width: 900px;
+    background-color: var(--theme-hover-color);
+    border-radius: 5px;
+    border: solid 1px var(--theme-pink);
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.page_title{
+    background-image: linear-gradient(to right, var(--theme-pink), var(--theme-pink2));
+    padding: 5px 0;
+    margin: 0;
+    border-radius: 4px;
+    font-family: 'Merienda', cursive;
+    color: var(--theme-gray);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.page_data{
+    border: solid 1px var(--theme-gray);
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.page_data p{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+
+/* media query */
+
+
+@media only screen and (max-width: 700px){
+    
+    .page_window{
+        width: initial;
+    }
+}
