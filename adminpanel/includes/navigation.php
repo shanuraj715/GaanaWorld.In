@@ -2,7 +2,8 @@
 
 <?php
 
-if(isset($_SESSION['userid'])){ ?>
+if(isset($_SESSION['userid'])){
+$userid = $_SESSION['userid']; ?>
 	<div class="admin_navigation">
 		<div class="admin_nav_left">
 			<a href="<?php echo SITE_URL . 'adminpanel/?page=upload';?>" class="admin_left_link_btn">Upload</a>
@@ -11,7 +12,7 @@ if(isset($_SESSION['userid'])){ ?>
 			<a href="<?php echo SITE_URL . 'adminpanel/?page=singer';?>" class="admin_left_link_btn" title="Private Section">Manage Singers</a>
 
 			<?php
-			$userid = $_SESSION['userid'];
+
 			$sql = "SELECT * FROM accounts WHERE user_id = $userid";
 			$query = mysqli_query($conn, $sql);
 			if($query){
