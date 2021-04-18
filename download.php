@@ -48,6 +48,4 @@ else{
     include './404.php';
     exit();
 }
-
-
 ?>
