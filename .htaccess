@@ -15,6 +15,9 @@ RewriteRule ^category category.php [NC,L]
 RewriteRule ^albums album-list.php [NC,L]
 RewriteRule ^show-album album.php [NC,L]
 
+
+RewriteRule ^file download.php [NC,L]
+
 RewriteRule ^s/([0-9a-zA-Z+]) s/index.php?string=$1 [NC,L]
 
 RewriteCond %{HTTP_HOST} ^gaanaworld\.in\.techfacts007\.in$ [OR]

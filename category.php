@@ -88,7 +88,7 @@ else{
 
 	<meta name="revisit-after" content="1 days" />
 
-	<meta name="og:title" content="<?php echo $category_title . ' | ' . SITE_TITLE; ?>" />
+	<meta name="og:title" content="<?php echo page_title($category_title, true); ?>" />
 
 	<meta name="og:url" content="<?php echo THIS_PAGE;?>" />
 

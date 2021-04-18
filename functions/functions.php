@@ -112,8 +112,8 @@ function songIdToName( $song_id ){
 }
 
 
-function songImage( $image, $image_month_dir ){
-    
+function songImage( $image, $image_month_dir, $category_id ){
+    global $conn;
     function getRandomImage(){
         $image_name = rand(1, 30);
         $image_name = $image_name . '.png';
@@ -127,19 +127,34 @@ function songImage( $image, $image_month_dir ){
             return SITE_URL . 'images/song_images/default.png';
         }
     }
+
+    function getCategoryImage( $category_id ){
+        $path = SITE_DIR .  'images/category_images/' . $category_id;
+        if( file_exists( $path . '.jpg' ) ){
+            return SITE_URL . 'images/category_images/' . $category_id . '.jpg';
+        }
+        elseif( file_exists( $path . '.png') ){
+            return SITE_URL . 'images/category_images/' . $category_id . '.png';
+        }
+        else{
+            return getRandomImage();
+        }
+    }
+
+
     if($image == ''){
-        return getRandomImage();
+        return getCategoryImage( $category_id );
         
     }
     else{
+
         $image_addr = './uploads/' . $image_month_dir . '/images/' . $image;
         if(file_exists($image_addr)){
             return SITE_URL . 'uploads/' . $image_month_dir . '/images/' . $image;
         }
         else{
-            return getRandomImage();
+            return getCategoryImage( $category_id );
         }
-        return SITE_URL . 'uploads/' . $image_month_dir . '/images/' . $image;
     }
 }
 
@@ -152,10 +167,9 @@ function incrementTotalDownloads( $song_id , $currentDownloads ){
     $query = mysqli_query($conn, $sql);
     if($query){
         $rows = mysqli_num_rows($query);
-        if($rows == 0 or $rows != 0){
+        if( $rows != 0){
             $result = mysqli_fetch_assoc($query);
             $last_date = $result['date_ts'];
-
             $now_time = time();
             if($now_time - $last_date > TD_INC_TIME){
                 /* update song table for total downloads and insert a new record in the database */
@@ -203,7 +217,48 @@ function incrementTotalDownloads( $song_id , $currentDownloads ){
             }
         }
         else{
-
+            $now_time = time();
+            $sql = "UPDATE songs SET total_downloads = $tot_down WHERE song_id = $song_id";
+            $query = mysqli_query($conn, $sql);
+            if($query){
+                $ip_to_loc = ipToLocation();
+                if($ip_to_loc['status'] == 'success' and !crawler()){
+                    $continent = $ip_to_loc['continent'];
+                    $country = $ip_to_loc['country'];
+                    $region = $ip_to_loc['region'];
+                    $city = $ip_to_loc['city'];
+                    $lat_long = $ip_to_loc['lat'] . ', ' . $ip_to_loc['lon'];
+                    $isp = $ip_to_loc['isp'];
+                    $proxy = $ip_to_loc['proxy'];
+                    if($proxy){
+                        $proxy = 'true';
+                    }
+                    else{
+                        $proxy = 'false';
+                    }
+                    
+                    $sql = "INSERT INTO ip_for_total_downloads(userip, song_id, date_ts, continent, country, region, city, lat_long, isp, proxy) VALUES('$user_ip', $song_id, '$now_time', '$continent', '$country', '$region', '$city', '$lat_long', '$isp', '$proxy')";
+                    try{
+                        $query = mysqli_query($conn, $sql);
+                        if(!$query){
+                            error_log( mysqli_error($conn) );
+                        }
+                    }
+                    catch( Exception $e){
+                        echo "Unable to update the total downloads";
+                    }
+                }
+                elseif( !crawler() ){
+                    $sql = "INSERT INTO ip_for_total_downloads(userip, song_id, date_ts)";
+                    $sql .= " VALUES('$user_ip', $song_id, '$now_time')";
+                    try{
+                        $query = mysqli_query($conn, $sql);
+                    }
+                    catch( Exception $e){
+                        echo "Unable to update the total downloads";
+                    }
+                } 
+            }
         }
     }
     else{
@@ -269,6 +324,10 @@ function totalSongsOfAlbum($album_id){
 }
 
 function page_title($title, $flag){
+    $pageNumber = '';
+    if( isset($_GET['page'])){
+        $pageNumber = " - Page " . $_GET['page'];
+    }
 	if(strlen($title) > 40){
 		$gen_title = '';
 		$title_array = explode(' ', $title);
@@ -279,12 +338,13 @@ function page_title($title, $flag){
 				$gen_title .= $value . ' ';
 			}
 		}
+        $gen_title .= $pageNumber . ' ';
 		if($flag == true){
 			$gen_title = $gen_title . '- ' . SITE_TITLE;
 		}
 	}
 	else{
-		$gen_title = $title;
+		$gen_title = $title . $pageNumber;
 		if($flag == true){
 			$gen_title = $gen_title . ' - ' . SITE_TITLE;
 		}
@@ -360,5 +420,6 @@ function ipToLocation(){
 	
 	return $array;
 }
+
 
 ?>

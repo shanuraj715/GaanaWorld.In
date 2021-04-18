@@ -1,6 +1,0 @@
-User-Agent: *
-Disallow: 
-Allow: /
-Disallow: /adminpanel
-
-Sitemap: https://gaanaworld.in/sitemap.xml

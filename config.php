@@ -1,6 +1,6 @@
 <?php
 
-$site_url = 'gaanaworld.in/'; // this var is used after in this file to create a constant that would access across the whole site.
+$site_url = '127.3.3.1/'; // this var is used after in this file to create a constant that would access across the whole site.
 
 $admin_email = 'shanuraj715@gmail.com'; // Admin email id to show anywhere in the site. this var will change into a constant.
 $admin_mobile = '+918271890685';

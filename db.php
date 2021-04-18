@@ -1,9 +1,9 @@
 <?php
 
 $db['host']         = 'localhost';
-$db['username']     = 'techfact_new_dj';
-$db['password']     = 'shanuraj715';
-$db['db_name']      = 'techfact_new_djraj';
+$db['username']     = 'root';
+$db['password']     = '';
+$db['db_name']      = 'gaanaworld.in';
 
 foreach($db as $key => $value){
     define(strtoupper($key), $value);

@@ -25,7 +25,7 @@ if($query && $rows == 1){
 	$this_song_category = $result['category_id'];
 	$title = $result['title'];
 	$category = catIdToName( $result['category_id']);
-	$image = songImage($result['image'], date('m_Y', $result['upload_timestamp']));
+	$image = songImage($result['image'], date('m_Y', $result['upload_timestamp']), $result['category_id']);
 	$total_downloads = $result['total_downloads'];
 	$uploaded_by = $result['uploaded_by'];
 	$upload_date = date('d-M-Y', $result['upload_timestamp']);

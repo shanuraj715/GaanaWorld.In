@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="song_download_btn_block">
-		<a href="<?php echo SITE_URL . 'uploads/' . $song_dir . '/' . $file_name;?>" class="song_download_btn" rel="nofollow">Download Now</a>
+		<a href="<?php echo SITE_URL . 'file/?sid=' . $song_id . '&key=' . time();?>" class="song_download_btn" rel="nofollow">Download Now</a>
 	</div>
 </div>
 
