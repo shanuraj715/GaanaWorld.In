@@ -34,7 +34,6 @@
 
 
 
-
 <div class="player_popup_bg">
 	<div class="player_settings" id="player_settings_popup">
 		<div class="player_popup_head">
