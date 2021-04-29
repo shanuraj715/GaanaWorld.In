@@ -114,32 +114,7 @@ function songIdToName( $song_id ){
 
 function songImage( $image, $image_month_dir, $category_id ){
     global $conn;
-    function getRandomImage(){
-        $image_name = rand(1, 30);
-        $image_name = $image_name . '.png';
-
-        $image_addr = './images/song_images/' . $image_name;
-
-        if(file_exists($image_addr)){
-            return SITE_URL . 'images/song_images/' . $image_name;
-        }
-        else{
-            return SITE_URL . 'images/song_images/default.png';
-        }
-    }
-
-    function getCategoryImage( $category_id ){
-        $path = SITE_DIR .  'images/category_images/' . $category_id;
-        if( file_exists( $path . '.jpg' ) ){
-            return SITE_URL . 'images/category_images/' . $category_id . '.jpg';
-        }
-        elseif( file_exists( $path . '.png') ){
-            return SITE_URL . 'images/category_images/' . $category_id . '.png';
-        }
-        else{
-            return getRandomImage();
-        }
-    }
+    
 
 
     if($image == ''){
@@ -148,13 +123,40 @@ function songImage( $image, $image_month_dir, $category_id ){
     }
     else{
 
-        $image_addr = './uploads/' . $image_month_dir . '/images/' . $image;
+        $image_addr = SITE_DIR . '/uploads/' . $image_month_dir . '/images/' . $image;
         if(file_exists($image_addr)){
             return SITE_URL . 'uploads/' . $image_month_dir . '/images/' . $image;
         }
         else{
             return getCategoryImage( $category_id );
         }
+    }
+}
+
+function getRandomImage(){
+    $image_name = rand(1, 17);
+    $image_name = $image_name . '.png';
+
+    $image_addr = SITE_DIR . '/images/song_images/' . $image_name;
+
+    if(file_exists($image_addr)){
+        return SITE_URL . 'images/song_images/' . $image_name;
+    }
+    else{
+        return SITE_URL . 'images/song_images/default.png';
+    }
+}
+
+function getCategoryImage( $category_id ){
+    $path = SITE_DIR .  'images/category_images/' . $category_id;
+    if( file_exists( $path . '.jpg' ) ){
+        return SITE_URL . 'images/category_images/' . $category_id . '.jpg';
+    }
+    elseif( file_exists( $path . '.png') ){
+        return SITE_URL . 'images/category_images/' . $category_id . '.png';
+    }
+    else{
+        return getRandomImage();
     }
 }
 
@@ -420,6 +422,13 @@ function ipToLocation(){
 	
 	return $array;
 }
+
+
+function getFilePath( $fileName, $uploadtimestamp ){
+    return SITE_URL . 'uploads/' . date('m_Y', $uploadtimestamp) . '/' . $fileName;
+}
+
+
 
 
 ?>

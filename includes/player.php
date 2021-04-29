@@ -7,7 +7,7 @@
 
 	<div class="player_container">
 
-		<audio id="song_player" src="<?php echo SITE_URL . 'uploads/' . $song_dir . '/' . $file_name;?>"></audio>
+		<audio id="song_player" src="<?php echo getFilePath( $file_name, $upload_timestamp);?>"></audio>
 		
 		<div class="player">
 			<div class="play-pause_btn_cont">

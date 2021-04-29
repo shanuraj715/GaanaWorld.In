@@ -30,6 +30,7 @@ if($query && $rows == 1){
 	$uploaded_by = $result['uploaded_by'];
 	$upload_date = date('d-M-Y', $result['upload_timestamp']);
 	$singer_id = $result['singer'];
+	$upload_timestamp = $result['upload_timestamp'];
 	$song_dir = date('m_Y', $result['upload_timestamp']);
 	$upload_time = date('h:i A',$result['upload_timestamp']);
 	$singer = singerIdToName( $result['singer'] );
