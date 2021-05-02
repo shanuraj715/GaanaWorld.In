@@ -11,6 +11,7 @@ include './class/class-login-user-ip-blocker.php';
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<?php include '../includes/head-files.php'; ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<meta name="robots" content="noindex,nofollow" />
@@ -45,6 +46,7 @@ include './class/class-login-user-ip-blocker.php';
 		}
 		
 
+		include '../includes/horizontal-ad.php';
 		include '../includes/footer.php';
 
 	?>

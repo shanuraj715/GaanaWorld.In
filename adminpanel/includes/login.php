@@ -79,7 +79,8 @@ else{
 }
 
 
-function loginForm(){ ?>	
+function loginForm(){
+	include '../includes/horizontal-ad.php'; ?>	
 	<div class="login">
 		<form action="" method="post">
 			<div class="form_block">

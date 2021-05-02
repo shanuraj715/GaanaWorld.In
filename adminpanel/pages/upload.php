@@ -379,7 +379,7 @@ function uploadImage($file){
 			<div class="input_block">
 				<textarea name="tags" class="tags_input" placeholder="Enter Tags Here. [Example : Hindi song, Punjabi Song, Hindi Remix]"></textarea>
 			</div>
-
+			<?php include '../includes/horizontal-ad.php'; ?>
 			<div class="upload_now_btn_block">
 				<input type="submit" class="upload_btn" value="Upload Now" />
 			</div>

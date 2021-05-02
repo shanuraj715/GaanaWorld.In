@@ -45,7 +45,7 @@ define("ADMIN_WHATSAPP", $admin_whatsapp);
 
 
 define("NEW_SONG_LIMIT", 20); // number of songs that will display on the new added songs section. This section is visible on homepage
-define("SONG_LIMIT", 18);
+define("SONG_LIMIT", 12);
 define("SEARCH_PAGE_SONG_LIMIT", 40);
 define("ADMIN_SONG_LIMIT", 80);
 define("RELATED_FILES_LIMIT", 10);

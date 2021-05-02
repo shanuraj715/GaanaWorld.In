@@ -135,7 +135,8 @@ function getSingerId($search_data){
     <!-- End Google Tag Manager (noscript) -->
     <?php
         include './includes/header.php'; 
-        include './includes/search.php'; ?>
+        include './includes/search.php';
+		include './includes/horizontal-ad.php'; ?>
         <div class="main_title_cont">
             <p class="main_title">Search Result for <?php echo urldecode($search_text);?></p>
         </div>
@@ -145,6 +146,7 @@ function getSingerId($search_data){
         getSearchedData( urldecode($search_text) );
 
         include './includes/other-features.php';
+		include './includes/horizontal-ad.php';
         include './includes/footer.php';
     ?>
 </body>
