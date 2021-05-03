@@ -9,7 +9,6 @@ function is_logged(){
     }
 }
 
-
 function include_page(){
     if(isset($_GET['page'])){
         $page = $_GET['page'];

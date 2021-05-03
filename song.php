@@ -129,6 +129,9 @@ incrementTotalDownloads( $song_id, $total_downloads );
 		include './includes/related-files.php';
 		include './includes/horizontal-ad.php';
 		include './includes/other-features.php';
+		if( isMobile() ){
+			include './includes/square-ad.php';
+		}
 		include './includes/footer.php';
 	?>
 </body>
