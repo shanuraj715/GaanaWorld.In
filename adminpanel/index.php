@@ -46,7 +46,9 @@ include './class/class-login-user-ip-blocker.php';
 		}
 		
 
-		include '../includes/horizontal-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include '../includes/horizontal-ad.php';
+		}
 		include '../includes/footer.php';
 
 	?>

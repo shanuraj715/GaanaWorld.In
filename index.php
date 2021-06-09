@@ -52,13 +52,19 @@ include './functions/functions.php';
     <?php
         include './includes/header.php'; 
         include './includes/search.php';
-        include './includes/horizontal-ad.php';
+        if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
         include './includes/new-added.php';
         
-        include './includes/horizontal-ad.php';
+        if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
         include './includes/categories.php';
         include './includes/other-features.php';
-        include './includes/horizontal-ad.php';
+        if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
         include './includes/footer.php';
     ?>
 </body>

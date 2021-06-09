@@ -125,9 +125,13 @@ incrementTotalDownloads( $song_id, $total_downloads );
 		include './includes/share.php';
 		include './includes/page_description.php';
 		include './includes/tags.php';
-		include './includes/horizontal-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
 		include './includes/related-files.php';
-		include './includes/horizontal-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
 		include './includes/other-features.php';
 		if( isMobile() ){
 			include './includes/square-ad.php';

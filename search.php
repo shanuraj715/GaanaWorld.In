@@ -136,7 +136,9 @@ function getSingerId($search_data){
     <?php
         include './includes/header.php'; 
         include './includes/search.php';
-		include './includes/horizontal-ad.php'; ?>
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		} ?>
         <div class="main_title_cont">
             <p class="main_title">Search Result for <?php echo urldecode($search_text);?></p>
         </div>
@@ -146,7 +148,9 @@ function getSingerId($search_data){
         getSearchedData( urldecode($search_text) );
 
         include './includes/other-features.php';
-		include './includes/horizontal-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
         include './includes/footer.php';
     ?>
 </body>

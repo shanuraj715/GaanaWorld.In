@@ -109,15 +109,23 @@ else{
 		include './includes/header.php';
 		include './includes/search.php';
 		include './includes/breadcrumb.php';
-		include './includes/horizontal-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
 		$is_child_cat_exist ? include './includes/categories.php' : null;
 		$is_songs_exist ? include './includes/song-list.php' : null;
-		include './includes/horizontal-ad.php';
+		
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
 		$is_songs_exist ? include './includes/pagination.php' : null;
 		include './includes/page_description.php';
 		include './includes/tags.php';
 		include './includes/other-features.php';
-		include './includes/horizontal-ad.php';
+		
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
 		include './includes/footer.php';
 	?>
 </body>

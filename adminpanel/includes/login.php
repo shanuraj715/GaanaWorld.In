@@ -80,7 +80,9 @@ else{
 
 
 function loginForm(){
-	include '../includes/horizontal-ad.php'; ?>	
+	if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+		include '../includes/horizontal-ad.php';
+	} ?>	
 	<div class="login">
 		<form action="" method="post">
 			<div class="form_block">

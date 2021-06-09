@@ -65,13 +65,17 @@ $tags = getSingerTags( $singer_id );
 	<?php
 		include './includes/header.php';
 		include './includes/search.php';
-		include './includes/horizontal-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
 		$singer -> offset = (SONG_LIMIT * $page) - SONG_LIMIT;
 		$singer -> singer_id = $singer_id;
 		$singer -> singerSongs();
 		include './includes/singer-pagination.php';
 		include './includes/page_description.php';
-		include './includes/horizontal-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			include './includes/horizontal-ad.php';
+		}
 		include './includes/tags.php';
 		include './includes/other-features.php';
 		include './includes/footer.php';
