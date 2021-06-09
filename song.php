@@ -133,8 +133,10 @@ incrementTotalDownloads( $song_id, $total_downloads );
 			include './includes/horizontal-ad.php';
 		}
 		include './includes/other-features.php';
-		if( isMobile() ){
-			include './includes/square-ad.php';
+		if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){
+			if( isMobile() ){
+				include './includes/square-ad.php';
+			}
 		}
 		include './includes/footer.php';
 	?>

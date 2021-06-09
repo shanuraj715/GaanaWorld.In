@@ -66,7 +66,10 @@
 			
 
 	</div>
-	<div class="ad-song-p1" style="width:400px; height: 400px;">
-		<?php include './includes/square-ad.php'; ?>
-	</div>
+	<?php
+	if( !(isset($_COOKIE['ads']) && $_COOKIE['ads'] =='disabled') ){ ?>
+		<div class="ad-song-p1" style="width:400px; height: 400px;">
+			<?php include './includes/square-ad.php'; ?>
+		</div>
+	<?php } ?>
 </div>
