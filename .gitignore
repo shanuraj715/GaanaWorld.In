@@ -1,4 +1,4 @@
 /uploads
 /old
-.config.php
-.db.php
+/config.php
+/db.php

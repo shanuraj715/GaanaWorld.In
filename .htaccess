@@ -15,6 +15,8 @@ RewriteRule ^category category.php [NC,L]
 RewriteRule ^albums album-list.php [NC,L]
 RewriteRule ^show-album album.php [NC,L]
 
+RewriteRule ^settings admin_settings.php [NC,L]
+
 
 RewriteRule ^myfavsongs favouriteSongs.php [NC,L]
 RewriteRule ^file download.php [NC,L]
